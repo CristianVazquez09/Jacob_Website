@@ -1,0 +1,178 @@
+<section class=" text-blue-j font-medium">
+
+  <div class="flex justify-center gap-5 p-2 mx-2 mt-4 mb-8 text-xl lg:text-3xl">
+    <button id="element-1"
+      class="p-1  text-center order-1 transition-transform duration-300 ease-in-out hover:scale-110"
+      [ngClass]="{'text-blue-j-200': selectedButton !== 1, 'text-2xl lg:text-4xl': selectedButton === 1}"
+      (click)="changeOrder(1)">
+      Verduras
+    </button>
+    <button id="element-2" class="p-1 order-2 transition-transform duration-300 ease-in-out hover:scale-110"
+      [ngClass]="{'text-blue-j-200': selectedButton !== 2, 'text-2xl lg:text-4xl': selectedButton === 2}"
+      (click)="changeOrder(2)">
+      Frutas
+    </button>
+    <button id="element-3"
+      class="p-1  text-center order-3 transition-transform duration-300 ease-in-out hover:scale-110"
+      [ngClass]="{'text-blue-j-200': selectedButton !== 3, 'text-2xl lg:text-4xl': selectedButton === 3}"
+      (click)="changeOrder(3)">
+      Legumbres
+    </button>
+  </div>
+
+ 
+
+  <div class="container-products-pg-product" id="container-frutas">
+    <div class="relative">
+      <img src="assets\img-manzana.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center md:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center md:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets/img-manzana.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center lg:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center lg:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets/img-manzana.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center lg:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center lg:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets/img-manzana.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center lg:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center lg:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets/img-manzana.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center lg:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center lg:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    
+
+    <!-- <div class="relative">
+      <img src="assets/img-manzana.png" alt="Manzana" class="w-full h-60 object-cover rounded-lg lg:h-72 xl:h-80">
+      <div class="card-pg-product absolute flex flex-col justify-center items-center text-white  lg:relative ">
+        <h3 class="text-lg text-center font-bold lg:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center lg:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets/img-manzana.png" alt="Manzana" class="w-full h-full object-cover rounded-lg">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center">Manzana</h3>
+        <p class="text-sm text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets/img-manzana.png" alt="Manzana" class="w-full h-full object-cover rounded-lg">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center">Manzana</h3>
+        <p class="text-sm text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets/img-manzana.png" alt="Manzana" class="w-full h-full object-cover rounded-lg">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center">Manzana</h3>
+        <p class="text-sm text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div> -->
+    
+  </div>
+
+
+  <div class="container-products-pg-product hidden" id="container-legumbres">
+    <div class="relative">
+      <img src="assets\img-frijol.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center md:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center md:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets\img-frijol.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center md:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center md:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets\img-frijol.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center md:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center md:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets\img-frijol.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center md:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center md:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container-products-pg-product hidden" id="container-verduras">
+    <div class="relative">
+      <img src="assets\img-tomate.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center md:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center md:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets\img-tomate.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center md:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center md:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets\img-tomate.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center md:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center md:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="assets\img-tomate.png" alt="Manzana" class="w-full h-full object-cover rounded-lg  lg:h-3/4">
+      <div class="card-pg-product">
+        <h3 class="text-lg font-bold text-center md:text-xl xl:text-2xl lg:text-black">Manzana</h3>
+        <p class="text-sm text-center md:text-base xl:text-lg lg:text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero-section bg-no-repeat bg-cover bg-center text-white text-center p-5 flex flex-col gap-7 items-center text-xl mt-32 lg:text-5xl lg:px-10 lg:py-20 lg:gap-14">
+  <p>¿Te intereso algún producto?</p>
+  <p>Contacta con nosotros</p>
+  <button class="bg-blue-j-700 px-4 py-2 rounded-lg mt-4 transition-buttom hover:bg-blue-j-500 lg:px-8 lg:py-4 lg:text-3xl" routerLink="/contact">Enviar mensaje</button>
+</section>

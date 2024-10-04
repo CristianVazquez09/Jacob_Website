@@ -1,0 +1,112 @@
+<header class="header relative w-full h-auto bg-cover bg-center bg-fixed font-Lato px-6 py-10">
+   <!-- Contenido del header -->
+   <div class="relative z-10 flex justify-between w-full mx-auto px-6 py-10 mb-20 max-w-[1380px]">
+      <p class="text-white text-xl font-normal font-Italianno cursor-pointer lg:text-5xl">El jardín del edén</p>
+      <img src="assets/img-menu.svg" alt="" class="h-6 w-6 cursor-pointer md:hidden" (click)="showMenu()">
+
+      <!-- Navegación para pantallas grandes (visible solo en pantallas grandes) -->
+      <nav class="hidden md:flex gap-16 text-xl text-blue-j text-white">
+         <a href="#" id="btn-acerca-de" class="hover:text-black transition-colors duration-300"
+            routerLink="/home">Inicio</a>
+         <a href="#" id="btn-menu" class="hover:text-black transition-colors duration-300"
+            routerLink="/products">Productos</a>
+         <a href="#" id="btn-galeria" class="hover:text-black transition-colors duration-300"
+            routerLink="/contact">Contacto</a>
+      </nav>
+   </div>
+
+
+
+   <div
+      class="mx-auto text-white flex flex-col gap-8 relative px-7 py-3 items-center  h-[30rem] max-w-[1380px] lg:gap-10 lg:w-2/3">
+      <h6 class="text-center text-3xl font-extrabold lg:text-start  xl:text-4xl">LAS MEJORES FRUTAS DE SAN CRISTOBAL
+      </h6>
+      <p class="text-center px-10  lg:p-0 lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+         dignissimos quo,
+         reiciendis officiis repellat nobis ipsum molestias exercitationem maxime impedit adipisci eligendi? Qui error
+         voluptate ipsum earum explicabo quisquam eveniet!</p>
+
+      <button
+         class="w-40 h-10 bg-white bg-opacity-35 hover:bg-white hover:text-black transition-buttom lg:w-60 lg:h-14 lg:text-xl"
+         routerLink="/contact">Compra
+         Ahora</button>
+   </div>
+</header>
+
+<app-dropdow-menu [ngClass]="{'hidden': isVisible}" id="menu" (isVisible)="hideMenu($event)"></app-dropdow-menu>
+
+
+
+<section
+   class="relative  w-[360px] min-h-[100px] grid grid-cols-2  gap-2 mx-auto  -mt-10 z-20 lg:grid-cols-4  lg:rounded-2xl lg:-mt-24 lg:gap-6 lg:w-5/6 xl:w-4/5">
+   <div class="card-pg-home">
+      <img src="assets/img-icono-estrella-circular.svg" alt="Icono estrella" class="icono-qualities-pg-home">
+      <p class="text-qualities-pg-home">Buena Calidad</p>
+   </div>
+   <div class="card-pg-home">
+      <img src="assets/img-icono-estrella-circular.svg" alt="Icono estrella" class="icono-qualities-pg-home">
+      <p class="text-qualities-pg-home">Buena Calidad</p>
+   </div>
+   <div class="card-pg-home">
+      <img src="assets/img-icono-estrella-circular.svg" alt="Icono estrella" class="icono-qualities-pg-home">
+      <p class="text-qualities-pg-home">Buena Calidad</p>
+   </div>
+   <div class="card-pg-home">
+      <img src="assets/img-icono-estrella-circular.svg" alt="Icono estrella" class="icono-qualities-pg-home">
+      <p class="text-qualities-pg-home">Buena Calidad</p>
+   </div>
+</section>
+
+<section class="flex flex-col items-center mx-4 my-24 p-3 lg:mt-60 lg:mb-56">
+   <h2 class="text-4xl text-center font-extrabold text-purple-j mb-8 lg:mb- lg:text-6xl">Nuestros productos</h2>
+
+   <!-- Contenedor de productos utilizando grid para mejor organización -->
+   <div class="grid grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-16 lg:mt-20">
+      <div class="card-product-pg-home">
+         <img src="assets/img-verduras.png" alt="Verduras" class="img-product">
+         <p class="title-product-pg-home lg:text-4xl">Verduras</p>
+      </div>
+      <div class="card-product-pg-home">
+         <img src="assets/img-frutas.png" alt="Frutas" class="img-product">
+         <p class="title-product-pg-home lg:text-4xl">Frutas</p>
+      </div>
+      <div class="card-product-pg-home">
+         <img src="assets/img-legumbres.png" alt="Legumbres" class="img-product">
+         <p class="title-product-pg-home lg:text-4xl">Legumbres</p>
+      </div>
+   </div>
+
+   <button
+      class="px-6 py-3 bg-blue-j-700 text-white text-lg font-bold rounded-md mt-16 hover:bg-blue-j-500 transition-buttom lg:px-10 lg:py-4 lg:text-2xl"
+      routerLink="/products">
+      Ver todos
+   </button>
+</section>
+
+
+<section class="flex flex-col items-center px-5 py-10 gap-8 mt-16 bg-gray-100 lg:mt-48">
+   <h2 class="text-4xl font-extrabold text-blue-j-500 mb-10 lg:text-6xl">Sobre Nosotros</h2>
+
+   <div class="flex flex-col items-center gap-10 lg:flex-row w-full max-w-6xl lg:gap-16 lg:my-10">
+      <!-- Imagen con contenedor responsive -->
+      <div class="w-full lg:w-1/2">
+         <img src="assets/img-nosotros-home.png" alt="Imagen sobre nosotros"
+            class="w-full h-auto object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">
+      </div>
+
+      <!-- Texto descriptivo -->
+      <div class="w-full lg:w-1/2 ">
+         <p class="text-blue-j text-base text-justify leading-relaxed lg:text-xl ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dignissimos quo, reiciendis officiis repellat
+            nobis ipsum molestias exercitationem maxime impedit adipisci eligendi? Qui error voluptate ipsum earum
+            explicabo quisquam eveniet!
+         </p>
+      </div>
+   </div>
+
+   <!-- Botón estilizado -->
+   <button
+      class="px-8 py-4 bg-blue-j-700 text-white text-lg font-bold rounded-md mt-10 hover:bg-blue-j-500 transition-colors duration-300 ease-in-out lg:text-2xl">
+      Saber más
+   </button>
+</section>

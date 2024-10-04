@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .card-footer-pg-layout{
+        @apply flex flex-col gap-8 p-8  lg:p-10  flex-1 xl:p-16 xl:gap-20
+    }
+
+    .card-title-footer-pg-layout{
+        @apply text-3xl font-bold xl:text-4xl lg:text-3xl
+    }
+
+    .card-paragraph-footer-pg-layout{
+        @apply text-xl  xl:text-2xl lg:text-lg
+    }
+
+    
+
+    .card-pg-home {
+        @apply w-44 bg-blue-j-700 flex flex-col items-center p-3 gap-3 text-white text-xl rounded-xl lg:justify-center lg:w-full lg:p-6 lg:m-0 lg:gap-4 ;
+    }
+
+    .text-qualities-pg-home{
+        @apply text-base font-bold;
+        @apply xl:text-2xl;
+        @apply lg:text-xl
+
+    }
+
+    .icono-qualities-pg-home{
+        @apply xl:w-20 xl:h-20;
+        @apply lg:w-16 lg:h-16;
+    }
+
+    .card-product-pg-home {
+        @apply p-4 transition-transform transform hover:scale-105 rounded-lg;
+        /* En pantallas xl, aumenta el tamaño del padding */
+        @apply xl:p-8 xl:text-center;
+    }
+
+
+    
+    .img-product {
+        @apply rounded-lg shadow-lg w-full transition-transform;
+        /* Aumenta el tamaño de la imagen en pantallas xl */
+        @apply xl:w-full xl:h-auto xl:scale-110 xl:mb-7;
+    }
+    
+    .title-product-pg-home {
+        @apply text-center font-bold text-lg mt-4;
+        /* Aumenta el tamaño del texto en pantallas xl */
+        @apply xl:mt-6 xl:inline-block ;
+    }
+    
+
+    .title-product-pg-home{
+        @apply text-center text-3xl text-blue-j-500 font-extrabold mt-4
+    }
+
+    .container-products-pg-product{
+        @apply grid grid-cols-2 gap-6 p-2 max-w-[1380px] min-w-96 mx-auto;
+        @apply md:grid-cols-3 md:mx-10;
+        @apply xl:grid-cols-4 xl:mx-auto;
+    }
+    .card-pg-product {
+        @apply absolute bottom-0 left-0 right-0 p-4 bg-blue-j-500 bg-opacity-50 text-white rounded-b-lg lg:bg-transparent lg:relative
+    }
+    .transition-buttom {
+        @apply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300
+    }
+
+    .image-product {
+        @apply w-full h-full object-cover rounded-lg
+    }
+
+    .title-product {
+        @apply text-lg font-bold text-center
+    }
+
+    .input-pg-contact {
+        @apply border border-gray-300 rounded-lg px-4 py-2 w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent;
+        @apply lg:px-10 py-6;
+    }
+}

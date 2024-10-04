@@ -1,0 +1,52 @@
+<header id="main-header">
+   <div class="relative z-10 flex justify-between mx-auto px-6 py-10 mb-20 items-center max-w-[1380px] lg:text-blue-j-500  ">
+      <div class="flex items-center gap-4 lg:gap-8">
+         <img src="assets/img-logo-sin-fondo-morado.svg" alt="Logo de El Jardín del Edén" class="lg:h-28 lg:w-h-28">
+         <p class="text-blue-j text-2xl font-normal font-Italianno cursor-pointer lg:text-5xl">El jardín del edén</p>
+       </div>
+   
+       <!-- Navegación para pantallas grandes (visible solo en pantallas grandes) -->
+       <nav class="hidden md:flex gap-16 text-xl text-blue-j">
+         <a href="#" id="btn-acerca-de" class="hover:text-blue-500 transition-colors duration-300" routerLink="/home">Inicio</a>
+         <a href="#" id="btn-menu" class="hover:text-blue-500 transition-colors duration-300" routerLink="/products">Productos</a>
+         <a href="#" id="btn-galeria" class="hover:text-blue-500 transition-colors duration-300" routerLink="contact">Contacto</a>
+       </nav>
+   
+       <!-- Icono de menú para dispositivos móviles (oculto en pantallas grandes) -->
+       <img id="imagen" src="assets/img-menu-1.svg" alt="Icono del menú" class="h-6 w-6 cursor-pointer md:hidden " (click)="showMenu()">
+   </div>
+     
+ </header>
+ 
+
+<router-outlet></router-outlet>
+
+<app-dropdow-menu [ngClass]="{'hidden': isVisible}" id="menu" (isVisible)="hideMenu($event)"></app-dropdow-menu>
+
+<footer class="bg-blue-j-500 mt-14 p-5 font-Lato lg:flex lg:justify-around">
+   <div class="card-footer-pg-layout text-center text-white">
+      <h6 class="card-title-footer-pg-layout">Siguenos</h6>
+      <div class="flex justify-center gap-8 xl:gap-12">
+         <a href="https://m.facebook.com/61563686588990/"><img src="assets/img-icono-facebook.svg" alt="" class="hover:scale-110 transition-transform duration-200 xl:w-14 xl:h-1w-14"></a>
+         <a href="https://www.instagram.com/eljardindeleden.fruteria?igsh=MWo5bGRtcTFtb204dA=="><img src="assets/img-icono-instragram.svg" alt="" class="hover:scale-110 transition-transform duration-200 xl:w-14 xl:h-1w-14"></a>
+         <a href="http://wa.me/529671936128"><img src="assets/img-icono-whatsapp.svg" alt="" class="hover:scale-110 transition-transform duration-200 xl:w-14 xl:h-1w-14"></a>
+         <a href=""><img src="assets/img-icono-tik-tok.svg" alt="" class="hover:scale-110 transition-transform duration-200 xl:w-14 xl:h-1w-14"></a>
+         
+         
+         
+      </div>
+   </div>
+   <div class="card-footer-pg-layout text-center text-white">
+      <h6 class="card-title-footer-pg-layout">Contacto</h6>
+      <p class="card-paragraph-footer-pg-layout">+52 967 897 56 78</p>
+      <p class="card-paragraph-footer-pg-layout">eleden10&#64;gmail.com</p>
+   </div>
+   <div class="card-footer-pg-layout text-center text-white ">
+      <h6 class="card-title-footer-pg-layout">Ubicación </h6>
+      <p class="card-paragraph-footer-pg-layout">Horarios de atención <br>
+
+         Lunes a sábado de 9:00 a.m a 9:30pm <br>
+
+         Domingo de 10:00 a.m a 9:30 p.m <br></p>
+   </div>
+</footer>

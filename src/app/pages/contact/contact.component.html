@@ -1,0 +1,60 @@
+<section class=" lg:mb-20">
+    <h2 class="text-3xl font-medium text-blue-j-500 text-center lg:text-6xl">Contacto</h2>
+    <p class="text-lg text-purple-j text-center mt-9 mb-3 lg:text-3xl lg:mt-10">Comunícate con nosotros</p>
+
+    <form #contactForm="ngForm" class=" max-w-md mx-auto bg-white rounded-lg p-6 lg:max-w-3xl lg:mt-10" (submit)="sendEmail($event)">
+        <div class="mb-6">
+            <input type="text" id="name"
+                class="input-pg-contact"
+                required [(ngModel)]="contact.name" name="name" #name="ngModel" placeholder="Nombre" name="user_name">
+            <div *ngIf="name.invalid && name.touched" class="text-red-500 mt-1 text-sm">El nombre es obligatorio.</div>
+        </div>
+
+        <div class="mb-6">
+            <input type="tel" id="phone"
+                class="input-pg-contact"
+                required [(ngModel)]="contact.phone" name="phone" #phone="ngModel" placeholder="Teléfono" name="phone">
+            <div *ngIf="phone.invalid && phone.touched" class="text-red-500 mt-1 text-sm">El teléfono es obligatorio.
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <textarea id="comments" rows="4"
+                class="input-pg-contact"
+                [(ngModel)]="contact.comments" name="comments" placeholder="Comentarios" name="comments"></textarea>
+        </div>
+
+        <div class="flex justify-center">
+            <button type="submit"
+                class="bg-blue-j-700 text-white py-2 px-8 rounded-lg hover:bg-purple-700 transition-buttom lg:py-4 lg:px-12 lg:text-2xl"
+                [disabled]="contactForm.invalid">Enviar</button>
+        </div>
+    </form>
+
+</section>
+
+<section class="bg-blue-j-500 px-8 py-10 mb-52 lg:flex lg:justify-center lg:gap-6">
+    <div class="my-20 lg:flex-1">
+        <img src="assets/img-icono-telefono.svg" alt="" class="mx-auto mb-5">
+        <p class="text-center text-2xl text-white font-bold">967 198 15 45</p>
+    </div>
+    <div class="my-20 lg:flex-1">
+        <img src="assets/img-icono-ubicacion.svg" alt="" class="mx-auto mb-5">
+        <p class="text-center text-2xl text-white font-bold">Avenida Insurgentes 127, Valle del Sur, San Cristóbal de las Casas, Chis</p>
+    </div>
+    <div class="my-20 lg:flex-1">
+        <img src="assets/img-icono-email.svg" alt="" class="mx-auto mb-5">
+        <p class="text-center text-2xl text-white font-bold">eleden10&#64;gmail.com</p>
+    </div>
+</section>
+
+
+<section class="w-full h-[500px]">
+    <p class="text-center text-blue-j-500 text-3xl mb-10">Ubicacion</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.453615912897!2d-122.41941558468334!3d37.77492957975892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c2e7e871f%3A0x58601b787fe6934!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1621984207283!5m2!1sen!2sus"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="pb-32">
+    </iframe>
+
+  </section>
+  
