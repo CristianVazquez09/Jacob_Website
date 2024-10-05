@@ -43,14 +43,6 @@ export class ContactComponent implements OnInit {
         {
           publicKey: 'fH0li1slVuyUkFWbz',
         }
-      )
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', (error as EmailJSResponseStatus).text);
-        }
       );
 
     emailjs.sendForm;
